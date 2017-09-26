@@ -1,0 +1,27 @@
+[user]
+	name = name 
+	email = email@gmail.com
+[credential]
+	helper = cache --timeout=3600
+[color]
+	branch = auto
+	diff = auto
+	status = auto
+	interactive = auto
+	ui = true
+	pager = true
+[color "branch"]
+	current = yellow reverse
+	local = yellow
+	remote = green
+[alias]
+	st = status
+	br = branch
+	hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset' --abbrev-commit
+	lg1 = log --graph --decorate --oneline --all
+	ca = commit --amend
+	cm = commit -m
+	aa = add .
+[push]
+	default = matching
